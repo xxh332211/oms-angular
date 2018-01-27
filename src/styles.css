@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
