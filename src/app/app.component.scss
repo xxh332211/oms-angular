@@ -1,22 +1,42 @@
-:host ::ng-deep .logo {
-  height: 32px;
-  background: #333;
-  border-radius: 6px;
-  margin: 16px;
-}
-
- :host ::ng-deep .ant-layout-sider-collapsed .nav-text {
-  display: none;
-}
-
- :host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
-  display: none;
-}
-
- :host ::ng-deep .ant-layout-sider-collapsed .anticon {
-  font-size: 16px;
-  margin-left: 8px;
-}
-.main {
+.oms{
+  height: 100%;
+  background: #ecebeb;
+  .oms-container {
     height: 100%;
+    background: #fff;
+    max-width: 1920px;
+    margin:0 auto;
+    position: relative;
+    .oms-left {
+      float:left;
+      height: 100%;
+      background: rgb(64,64,64);
+      position: absolute;
+      left: 0;
+      top:0;
+      .oms-sider {
+        height:100%;
+        .sider_container {
+          height: 100%;
+          position: relative;
+          .btn-togglemenu {
+            position: absolute;
+            background: transparent;
+            border: none;
+            color:#fff;
+            font-size: 18px;
+            bottom:1%;
+            left: 50%;
+            transform: translateX(-50%);
+            outline: none;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .oms-right {
+      background: #ecebeb;
+    }
+  }
 }

@@ -1,48 +1,58 @@
-<nz-layout class="main">
-<nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" nzBreakpoint="md">
-    <div class="logo">
-    </div>
-    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
-      <li nz-submenu>
-        <span title>
-          <i class="anticon anticon-user"></i>
-          <span class="nav-text">User</span>
-        </span>
-        <ul>
-          <li nz-menu-item>Tom</li>
-          <li nz-menu-item>Bill</li>
-          <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu>
-        <span title>
-          <i class="anticon anticon-team"></i>
-          <span class="nav-text">Team</span>
-        </span>
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
-      </li>
-      <li nz-menu-item>
-        <span>
-          <i class="anticon anticon-file"></i>
-          <span class="nav-text">File</span>
-        </span>
-      </li>
-    </ul>
-  </nz-sider>
-  <nz-layout>
-    <nz-header style="background: #fff; padding:0;"></nz-header>
-    <nz-content style="margin:0 16px;">
-      <nz-breadcrumb style="margin:12px 0;">
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
-      <div style="padding:24px; background: #fff; min-height: 360px;">
-        Bill is a cat.
+<div class="oms">
+  <div class="oms-container">
+    <div class="oms-left">
+      <div class="oms-logo"></div>
+      <div class="oms-sider">
+        <div class="sider_container">
+          <button (click)="toggleCollapsed()" class="btn-togglemenu">
+            <i class="anticon" [class.anticon-menu-unfold]="isCollapsed" [class.anticon-menu-fold]="!isCollapsed">
+            </i>
+          </button>
+          <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
+            <li nz-menu-item>
+              <span title>
+                <i class="anticon anticon-mail"></i>
+                <span>Navigation One</span>
+              </span>
+            </li>
+            <li nz-submenu class="submenu">
+              <span title>
+                <i class="anticon anticon-appstore"></i>
+                <span>Navigation Two</span>
+              </span>
+              <ul>
+                <li nz-menu-item>Option 5</li>
+                <li nz-menu-item>Option 6</li>
+                <li nz-submenu>
+                  <span title>Submenu</span>
+                  <ul>
+                    <li nz-menu-item>Option 7</li>
+                    <li nz-menu-item>Option 8</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li nz-submenu>
+              <span title>
+                <i class="anticon anticon-setting"></i>
+                <span>Navigation Three</span>
+              </span>
+              <ul>
+                <li nz-menu-item>Option 10</li>
+                <li nz-menu-item>Option 10</li>
+                <li nz-menu-item>Option 11</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </nz-content>
-    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
-  </nz-layout>
-</nz-layout>
+    </div>
+    <div class="oms-right">
+      <div class="oms-header">
+        <button (click)="hahaha()">hahah</button>
+      </div>
+      <div class="oms-main"></div>
+      <div class="oms-footer"></div>
+    </div>
+  </div>
+</div>
