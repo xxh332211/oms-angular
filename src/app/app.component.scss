@@ -1,4 +1,4 @@
-.oms{
+.oms {
   height: 100%;
   background: #ecebeb;
   .oms-container {
@@ -14,11 +14,21 @@
       position: absolute;
       left: 0;
       top:0;
+      &.menuopen {
+        width: 200px;
+      }
+      &.menuclose {
+        width: 64px;
+      }
       .oms-sider {
+        
         height:100%;
         .sider_container {
           height: 100%;
           position: relative;
+          .submenu {
+           
+          }
           .btn-togglemenu {
             position: absolute;
             background: transparent;
@@ -37,6 +47,10 @@
     }
     .oms-right {
       background: #ecebeb;
+      .oms-header {
+        
+      }
+
     }
   }
 }
