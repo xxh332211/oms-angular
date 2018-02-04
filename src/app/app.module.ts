@@ -7,10 +7,14 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
 import { ShowcaseComponent } from './view/showcase/showcase.component';
 import { AppRoutingModule } from './app.routes';
+import { SayholloComponent } from './view/sayhollo/sayhollo.component';
+import { TodomvcComponent } from './view/todomvc/todomvc.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ShowcaseComponent
+    ShowcaseComponent,
+    SayholloComponent,
+    TodomvcComponent
   ],
   imports: [
     AppRoutingModule,

@@ -5,26 +5,20 @@
       <div class="oms-sider">
         <div class="sider_container">
           <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
-            <li nz-menu-item class="submenu">
-              <span title>
-                <i class="anticon anticon-mail"></i>
-                <span>index</span>
-              </span>
-            </li>
             <li nz-submenu class="submenu">
               <span title>
                 <i class="anticon anticon-appstore"></i>
                 <span>example</span>
               </span>
               <ul>
-                <li nz-menu-item><a routerLink="/showcase" routerLinkActive="active">showcase</a></li>
-                <li nz-menu-item>Option 6</li>
-                <li nz-submenu>
-                  <span title>Submenu</span>
-                  <ul>
-                    <li nz-menu-item>Option 7</li>
-                    <li nz-menu-item>Option 8</li>
-                  </ul>
+                <li nz-menu-item>
+                  <a href="#" routerLink="/sayhollo" routerLinkActive="active">index</a>
+                </li>
+                <li nz-menu-item>
+                  <a routerLink="/showcase" routerLinkActive="active">showcase</a>
+                </li>
+                <li nz-menu-item>
+                  <a routerLink="/todomvc" routerLinkActive="active">todomvc</a>
                 </li>
               </ul>
             </li>
