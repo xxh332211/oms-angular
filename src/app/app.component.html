@@ -1,27 +1,23 @@
 <div class="oms">
   <div class="oms-container">
     <div class="oms-left {{menuclass}}">
-      <div class="oms-logo"></div>
+
       <div class="oms-sider">
         <div class="sider_container">
-          <button (click)="toggleCollapsed()" class="btn-togglemenu">
-            <i class="anticon" [class.anticon-menu-unfold]="isCollapsed" [class.anticon-menu-fold]="!isCollapsed">
-            </i>
-          </button>
           <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
             <li nz-menu-item class="submenu">
               <span title>
                 <i class="anticon anticon-mail"></i>
-                <span>Navigation One</span>
+                <span>index</span>
               </span>
             </li>
             <li nz-submenu class="submenu">
               <span title>
                 <i class="anticon anticon-appstore"></i>
-                <span>Navigation Two</span>
+                <span>example</span>
               </span>
               <ul>
-                <li nz-menu-item>Option 5</li>
+                <li nz-menu-item><a routerLink="/showcase" routerLinkActive="active">showcase</a></li>
                 <li nz-menu-item>Option 6</li>
                 <li nz-submenu>
                   <span title>Submenu</span>
@@ -49,10 +45,21 @@
     </div>
     <div class="oms-right">
       <div class="oms-header">
-        <button (click)="hahaha()">hahah</button>
+        <div class="oms-logo">
+          <button (click)="toggleCollapsed()" class="btn-togglemenu">
+            <i class="anticon" [class.anticon-menu-unfold]="isCollapsed" [class.anticon-menu-fold]="!isCollapsed">
+            </i>
+          </button>
+          <h1>大袜网OMS</h1>
+        </div>
       </div>
-      <div class="oms-main"></div>
-      <div class="oms-footer"></div>
+      <div class="oms-main  {{menuclass}}">
+        <div class="oms-nav">
+        </div>
+        <div class="oms-center">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
   </div>
 </div>

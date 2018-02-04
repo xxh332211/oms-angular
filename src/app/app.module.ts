@@ -5,14 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
-import { AdminComponent } from './view/admin/admin.component';
-
+import { ShowcaseComponent } from './view/showcase/showcase.component';
+import { AppRoutingModule } from './app.routes';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent
+    ShowcaseComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,

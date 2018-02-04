@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,13 +10,10 @@ export class AppComponent {
   isCollapsed = false;
   toggleCollapsed() {
     this.isCollapsed = !this.isCollapsed;
-    if(this.isCollapsed) {
-      this.menuclass = "menuclose";
-    }else {
-      this.menuclass = "menuopen";
+    if (this.isCollapsed) {
+      this.menuclass = 'menuclose';
+    } else {
+      this.menuclass = 'menuopen';
     }
-  }
-  hahaha(){
-    window.alert("hahah");
   }
 }

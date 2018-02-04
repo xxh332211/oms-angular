@@ -1,0 +1,149 @@
+<nz-tabset [nzTabPosition]="'top'">
+  <nz-tab *ngFor="let tab of tabs">
+    <ng-template #nzTabHeading>
+      {{tab.name}}
+    </ng-template>
+    <!-- 通知框 -->
+    <span *ngIf="tab.index==1">
+      <button nz-button [nzType]="'primary'" (click)="createBasicNotification()">打开通知提示框</button>
+      <button nz-button (click)="createNotification_2('success')">成 功</button>
+      <button nz-button (click)="createNotification_2('info')">消 息</button>
+      <button nz-button (click)="createNotification_2('warning')">警 告</button>
+      <button nz-button (click)="createNotification_2('error')">错 误</button>
+    </span>
+    <!-- 多样性表格 -->
+    <span *ngIf="tab.index==2">
+      <nz-table #nzTable [nzDataSource]="tabledata" nzBordered [nzPageSize]="1" [nzScroll]="{ y: 500 }" [nzShowFooter]="true">
+        <tbody nz-tbody *ngFor="let data of nzTable.data; index as i;">
+          <tr nz-tbody-tr>
+            <td nz-td rowspan="5" colspan="1">
+              {{data.name}}
+            </td>
+            <td nz-td>
+              key
+            </td>
+            <td nz-td>
+              {{data.key}}
+            </td>
+            <td nz-td>
+              name
+            </td>
+            <td nz-td colspan="3">
+              {{data.name}}
+            </td>
+          </tr>
+          <tr nz-tbody-tr>
+            <td nz-td>
+              age
+            </td>
+            <td nz-td>
+              {{data.age}}
+            </td>
+            <td nz-td>
+              tel
+            </td>
+            <td nz-td>
+              {{data.tel}}
+            </td>
+            <td nz-td>
+              phone
+            </td>
+            <td nz-td>
+              {{data.phone}}
+            </td>
+          </tr>
+          <tr nz-tbody-tr style="color:red;">
+            <td nz-td>
+              age
+            </td>
+            <td nz-td>
+              {{data.age}}
+            </td>
+            <td nz-td>
+              tel
+            </td>
+            <td nz-td>
+              {{data.tel}}
+            </td>
+            <td nz-td>
+              phone
+            </td>
+            <td nz-td>
+              {{data.phone}}
+            </td>
+          </tr>
+          <tr nz-tbody-tr>
+            <td nz-td>
+              age
+            </td>
+            <td nz-td>
+              {{data.age}}
+            </td>
+            <td nz-td>
+              tel
+            </td>
+            <td nz-td>
+              {{data.tel}}
+            </td>
+            <td nz-td>
+              phone
+            </td>
+            <td nz-td>
+              {{data.phone}}
+            </td>
+          </tr>
+          <tr nz-tbody-tr>
+            <td nz-td>
+              adress
+            </td>
+            <td nz-td colspan="5">
+              {{data.adress}}
+            </td>
+          </tr>
+        </tbody>
+        <tbody nz-tbody>
+          <tr nz-tbody-tr>
+
+            <td nz-td>
+              总计
+            </td>
+            <td nz-td>
+              100
+            </td>
+            <td nz-td>
+              100
+            </td>
+            <td nz-td>
+              100
+            </td>
+            <td nz-td>
+              100
+            </td>
+            <td nz-td>
+              100
+            </td>
+            <td nz-td>
+              100
+            </td>
+          </tr>
+        </tbody>
+
+        <span nz-table-footer>
+        </span>
+      </nz-table>
+    </span>
+    <!-- 多选框 -->
+    <span *ngIf="tab.index==3">
+      <nz-select style="width: 200px;" [(ngModel)]="single" [nzSize]="size" nzShowSearch>
+        <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+      <br>
+      <br>
+      <nz-select style="width: 100%" [(ngModel)]="tag" [nzSize]="size" [nzMode]="'tags'">
+        <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </span>
+  </nz-tab>
+</nz-tabset>

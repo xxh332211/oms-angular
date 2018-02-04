@@ -8,12 +8,14 @@
     margin:0 auto;
     position: relative;
     .oms-left {
-      float:left;
       height: 100%;
       background: rgb(64,64,64);
       position: absolute;
       left: 0;
       top:0;
+      padding-top:50px;
+      transition:width .5s;
+      z-index: 3;
       &.menuopen {
         width: 200px;
       }
@@ -21,36 +23,83 @@
         width: 64px;
       }
       .oms-sider {
-        
         height:100%;
         .sider_container {
           height: 100%;
           position: relative;
-          .submenu {
-           
-          }
-          .btn-togglemenu {
-            position: absolute;
-            background: transparent;
-            border: none;
-            color:#fff;
-            font-size: 18px;
-            bottom:1%;
-            left: 50%;
-            transform: translateX(-50%);
-            outline: none;
-            border: none;
-            cursor: pointer;
-          }
         }
       }
     }
     .oms-right {
       background: #ecebeb;
+      height:100%;
+      // position: relative;
       .oms-header {
-        
-      }
+        height:50px;
+        background: #404040;
+        position: relative;
+        z-index: 3;
+        .oms-logo {
+          height: 50px;
+          width:200px;
+          float:left;
+          position: relative;
+          background: #404040;
+          .btn-togglemenu {
+            position: absolute;
+            background: transparent;
+            border: none;
+            color: #fff;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            cursor: pointer;
+            width: 64px;
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 18px;
+          }
+          h1 {
+            width: 100%;
+            line-height: 50px;
+            height: 50px;
+            padding-left: 64px;
+            color: #FFF;
+          }
+        }
 
+      }
+      .oms-main {
+        height: 100%;
+        background: #d6d6d6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+        width:100%;
+        padding-right:10px;
+        padding-bottom: 10px;
+        &.menuopen {
+          padding-left: 210px;
+        }
+
+        &.menuclose {
+          padding-left: 74px;
+        }
+
+        .oms-nav {
+          
+        }
+        .oms-center {
+          height: 100%;
+          transition: all .5s;
+          overflow: auto;
+          background: #fff;
+        }
+      }
     }
   }
 }
