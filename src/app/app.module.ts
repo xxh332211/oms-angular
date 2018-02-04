@@ -9,12 +9,16 @@ import { ShowcaseComponent } from './view/showcase/showcase.component';
 import { AppRoutingModule } from './app.routes';
 import { SayholloComponent } from './view/sayhollo/sayhollo.component';
 import { TodomvcComponent } from './view/todomvc/todomvc.component';
+import { PagenotfoundComponent } from './view/pagenotfound/pagenotfound.component';
+import { TodoDetailComponent } from './view/todomvc/todo-detail/todo-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     ShowcaseComponent,
     SayholloComponent,
-    TodomvcComponent
+    TodomvcComponent,
+    PagenotfoundComponent,
+    TodoDetailComponent
   ],
   imports: [
     AppRoutingModule,
