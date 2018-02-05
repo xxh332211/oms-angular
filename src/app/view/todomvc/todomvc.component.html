@@ -21,7 +21,7 @@
             {{todo.title}}
           </ng-template>
           <ng-template #extra>
-            <a>编辑</a>
+            <a [routerLink]="['/todo',todo.id]">编辑</a>
             <a [attr.deleteid]=todo.id (click)='remove(todo.id)'>删除</a>
           </ng-template>
           <ng-template #body>
